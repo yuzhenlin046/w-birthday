@@ -1,0 +1,799 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*font-size: 16px;*/
+    border: 0;
+}
+
+html,body{
+    width: 414px;
+    height: 736px;
+    overflow: hidden;
+}
+
+.page{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/*第一张页面*/
+#page1{
+    background-color: #d73b3c;
+    display: none;
+}
+
+/*头部水印*/
+#page1 > .top_watermark{
+    background: url("../img/top_watermark.png") no-repeat center center;
+    width: 61.25rem;
+    height: 67.125rem;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    -webkit-animation:water1 1s linear ;
+    -o-animation:water1 1s linear ;
+    animation:water1 1s linear ;
+}
+
+/*底部水印*/
+#page1 > .bottom_watermark{
+    background: url("../img/top_watermark.png") no-repeat center center;
+    width: 61.25rem;
+    height: 41.8125rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    -webkit-animation:water1 1s linear ;
+    -o-animation:water1 1s linear ;
+    animation:water1 1s linear ;
+}
+@keyframes water1 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/*左边彩带样式*/
+#page1 > .left_coloured{
+    background: url("../img/left_coloured.png") no-repeat center center;
+    width: 19.75rem;
+    height: 27.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    -webkit-animation:sc 2s linear;
+    -o-animation:sc 2s linear;
+    animation:sc 2s linear;
+}
+@keyframes sc {
+    0%{
+        left: -12.1875rem;
+        top: -14.75rem;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+
+/*右边彩带样式*/
+#page1 > .right_coloured{
+    background: url("../img/right_coloured.png") no-repeat center center;
+    width: 23.125rem;
+    height: 24.1875rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    -webkit-animation:rc 2s linear ;
+    -o-animation:rc 2s linear ;
+    animation:rc 2s linear ;
+}
+@keyframes rc {
+    0%{
+        top: -17rem;
+        right: -14.125rem;
+    }
+    
+    100%{
+        top: 0;
+        right: 0;
+    }
+    
+}
+
+/*右边气球*/
+#page1 > .right_balloon{
+    background: url("../img/right_balloon.png") no-repeat center center;
+    width: 12.3125rem;
+    height: 21.0625rem;
+    position: fixed;
+    right: 2.9375rem;
+    bottom: 0;
+    z-index: 100;
+}
+#page1 > .right_balloon_appear{
+    -webkit-animation:rba 2s linear;
+    -o-animation:rba 2s linear;
+    animation:rba 2s linear;
+}
+
+#page1 > .right_balloon_keep{
+    -webkit-animation:rbk 1s linear infinite;
+    -o-animation:rbk 1s linear infinite;
+    animation:rbk 1s linear infinite;
+}
+
+@keyframes rba {
+    0%{
+        bottom: -10.8125rem;
+        right: 2.9375rem;
+    }
+    25%{
+        bottom: -8.65rem;
+        right: 2.3125rem;
+    }
+    50%{
+        bottom: -6.4875rem;
+        right: 2.9375rem;
+    }
+    75%{
+        bottom: -4.325rem;
+        right: 3.5625rem;
+    }
+    100%{
+        bottom: 0;
+        right: 2.9375rem;
+    }
+}
+@keyframes rbk {
+    0%{
+        right: 2.9375rem;
+    }
+    25%{
+        right: 2.625rem;
+    }
+    50%{
+        right: 2.9375rem;
+    }
+    75%{
+        right: 3.25rem;
+    }
+    100%{
+        right: 2.9375rem;
+    }
+}
+
+/*左边气球*/
+#page1 > .left_balloon{
+    background: url("../img/left_balloon.png") no-repeat center center;
+    width: 12.875rem;
+    height: 18.4375rem;
+    left: 2.4375rem;
+    bottom: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+/*左边气球出现动画*/
+#page1 > .left_balloon_appear{
+    -webkit-animation:lba 2s linear;
+    -o-animation:lba 2s linear;
+    animation:lba 2s linear;
+}
+
+/*左边气球持续动画*/
+#page1 > .left_balloon_keep{
+    -webkit-animation:lbk 1s linear infinite;
+    -o-animation:lbk 1s linear infinite;
+    animation:lbk 1s linear infinite;
+}
+
+@keyframes lba {
+    0%{
+        bottom: -18.4375rem;
+        left: 2.4375rem;
+    }
+    25%{
+        left: 1.875rem;
+    }
+    50%{
+        left: 2.4375rem;
+    }
+    75%{
+        left:3rem;
+    }
+    100%{
+        left: 2.4375rem;
+    }
+}
+@keyframes lbk {
+    0%{
+        left: 2.4375rem;
+    }
+    25%{
+        left: 1.875rem;
+    }
+    50%{
+        left: 2.4375rem;
+    }
+    75%{
+        left:3rem;
+    }
+    100%{
+        left: 2.4375rem;
+    }
+}
+
+
+
+/*头部彩花*/
+#page1 > .top_ayaka{
+    background: url("../img/top_ayaka.png") no-repeat center center;
+    width: 61.25rem;
+    height: 53.6875rem;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+/*出现动画*/
+#page1 > .top_ayaka_appear{
+    -webkit-animation:tay 0.6s linear;
+    -o-animation:tay 0.6s linear;
+    animation:tay 0.6s linear;
+}
+
+/*持续动画*/
+#page1 > .top_ayaka_keep{
+    -webkit-animation:tays 2s linear 1s infinite;
+    -o-animation:tays 2s linear 1s infinite;
+    animation:tays 2s linear 1s infinite;
+}
+
+@keyframes tay {
+    0%{
+        opacity: 0;
+        -webkit-transform: scale(0.5, 0.5);
+        -moz-transform: scale(0.5, 0.5);
+        -ms-transform: scale(0.5, 0.5);
+        -o-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: scale(1,1);
+        -moz-transform: scale(1,1);
+        -ms-transform: scale(1,1);
+        -o-transform: scale(1,1);
+        transform: scale(1,1);
+    }
+}
+@keyframes tays {
+    0%{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    25%{
+        -webkit-transform: rotate(-2deg);
+        -moz-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+        -o-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+    }
+
+    50%{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    75%{
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+
+    100%{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+/*底部彩花*/
+#page1 > .bottom_ayaka{
+    background: url("../img/bottom_ayaka.png") no-repeat center center;
+    width: 61.25rem;
+    height: 50.875rem;
+    position: fixed;
+    bottom: 0;
+}
+
+#page1 > .bottom_ayaka_keep{
+    -webkit-animation:bays 2s linear 1s infinite;
+    -o-animation:bays 2s linear 1s infinite;
+    animation:bays 2s linear 1s infinite;
+}
+
+
+/*底部彩花持续效果*/
+@keyframes bays {
+    0%{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    25%{
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+        -o-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+
+    50%{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    75%{
+        -webkit-transform: rotate(-2deg);
+        -moz-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+        -o-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+    }
+
+    100%{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+
+/*底部气球*/
+#page1 > .bottom_balloon{
+    background: url("../img/bottom_balloon.png") no-repeat center center;
+    width: 61.25rem;
+    height:25.8125rem;
+    position: fixed;
+    bottom: 0;
+}
+#page1 > .bottom_balloon_appear{
+    -webkit-animation:bba 2s linear;
+    -o-animation:bba 2s linear;
+    animation:bba 2s linear ;
+}
+#page1 > .bottom_balloon_keep{
+    -webkit-animation:bbk 1s linear infinite;
+    -o-animation:bbk 1s linear infinite;
+    animation:bbk 1s linear infinite;
+}
+@keyframes bba {
+    0%{
+        bottom: -25.8125rem;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes bbk {
+    0%{
+        bottom: 0rem;
+    }
+    25%{
+        bottom:-0.3125rem;
+    }
+    50%{
+        bottom: 0rem;
+    }
+    75%{
+        bottom: 0.3125rem;
+    }
+    100%{
+        bottom: 0rem;
+    }
+}
+
+
+/*happy_birthday*/
+#page1 > .happy_birthday{
+    background: url("../img/happy_birthday.png") no-repeat center center;
+    width: 52.4375rem;
+    height:61.9375rem;
+    position: fixed;
+    left: 3.875rem;
+    top: 24.375rem;
+    display: none;
+    z-index: 2;
+}
+#page1 > .happy_birthday_appear{
+    display: block;
+    -webkit-animation:pha 0.3s linear;
+    -o-animation:pha 0.3s linear;
+    animation:pha 0.3s linear;
+}
+
+@keyframes pha{
+    0%{
+        -webkit-transform: scale(0.2,0.2);
+        -moz-transform: scale(0.2,0.2);
+        -ms-transform: scale(0.2,0.2);
+        -o-transform: scale(0.2,0.2);
+        transform: scale(0.2,0.2);
+        opacity: 0;
+    }
+    80%{
+        -webkit-transform: scale(1.2,1.2);
+        -moz-transform: scale(1.2,1.2);
+        -ms-transform: scale(1.2,1.2);
+        -o-transform: scale(1.2,1.2);
+        transform: scale(1.2,1.2);
+    }
+    85%{
+        -webkit-transform: scale(1,1);
+        -moz-transform: scale(1,1);
+        -ms-transform: scale(1,1);
+        -o-transform: scale(1,1);
+        transform: scale(1,1);
+    }
+    90%{
+        -webkit-transform: scale(0.8,0.8);
+        -moz-transform: scale(0.8,0.8);
+        -ms-transform: scale(0.8,0.8);
+        -o-transform: scale(0.8,0.8);
+        transform: scale(0.8,0.8);
+    }
+    100%{
+        -webkit-transform: scale(1,1);
+        -moz-transform: scale(1,1);
+        -ms-transform: scale(1,1);
+        -o-transform: scale(1,1);
+        transform: scale(1,1);
+        opacity: 1;
+    }
+}
+
+/*cake*/
+#page1 > .cake{
+    background: url("../img/cake.png") no-repeat center center;
+    width: 33.625rem;
+    height:40rem;
+    position: fixed;
+    left: 13rem;
+    top: 14.5rem;
+    z-index: 1;
+    display: none;
+}
+
+#page1 > .cake_appear{
+    -webkit-animation:ca 0.5s linear;
+    -o-animation:ca 0.5s linear;
+    animation:ca 0.5s linear;
+    display: block;
+}
+@keyframes ca {
+    0%{
+        top: -40rem;
+    }
+    80%{
+        top: 12.625rem;
+        -webkit-transform: scale(0.8,0.8);
+        -moz-transform: scale(0.8,0.8);
+        -ms-transform: scale(0.8,0.8);
+        -o-transform: scale(0.8,0.8);
+        transform: scale(0.8,0.8);
+    }
+    85%{
+        top: 14.5rem;
+        -webkit-transform: scale(1,1);
+        -moz-transform: scale(1,1);
+        -ms-transform: scale(1,1);
+        -o-transform: scale(1,1);
+        transform: scale(1,1);
+    }
+    90%{
+        top: 12.625rem;
+        -webkit-transform: scale(0.8,0.8);
+        -moz-transform: scale(0.8,0.8);
+        -ms-transform: scale(0.8,0.8);
+        -o-transform: scale(0.8,0.8);
+        transform: scale(0.8,0.8);
+    }
+    100%{
+        top: 14.5rem;
+        -webkit-transform: scale(1,1);
+        -moz-transform: scale(1,1);
+        -ms-transform: scale(1,1);
+        -o-transform: scale(1,1);
+        transform: scale(1,1);
+    }
+}
+
+/*第二张页面开始*/
+#page2{
+    background: url("../img/p2_bg.png") no-repeat center center;
+}
+
+#page2 > .p2_bg_line{
+    position: fixed;
+    width: 61.25rem;
+    height: 80.3125rem;
+    top: 28.625rem;
+    left: 0;
+    background: url("../img/p2_line.png") no-repeat center center;
+}
+
+#page2 > .p2_bottom_blue{
+    position: fixed;
+    width: 61.25rem;
+    height: 5.375rem;
+    background: url("../img/p2_bottom_blue.png") no-repeat center center;
+    bottom: 0;
+    left: 0;
+}
+
+#page2 > .p2_right_bird{
+    background: url("../img/p2_right_bird.png") no-repeat center center;
+    width: 14.6875rem;
+    height: 21.9375rem;
+    position: fixed;
+    left: 2.0625rem;
+    bottom: 3rem;
+    display: none;
+}
+#page2 > .p2_right_bird_appear{
+    display: block;
+    animation: prba 1s linear;
+}
+@keyframes prba {
+    0%{
+        left: -21.9375rem;
+        bottom: 2.9375rem;
+    }
+    25%{
+        left: -15.9375rem;
+        bottom: 1.6875rem;
+    }
+    50%{
+        left:-9.9375rem;
+        bottom: 2.9375rem;;
+    }
+    75%{
+        left:-3.9375rem;
+        bottom: 1.6875rem;
+    }
+    100%{
+        left:2.0625rem;
+        bottom: 2.9375rem;
+    }
+}
+
+/*礼物出现动画*/
+#page2 > .p2_present{
+    -webkit-animation:pap 1s linear;
+    -o-animation:pap 1s linear;
+    animation:pap 1s linear ;
+}
+@keyframes pap {
+    0%{
+        opacity: 0;
+        bottom: 37.6875rem;
+    }
+    100%{
+        opacity: 1;
+        bottom: 2.625rem;
+    }
+}
+
+#page2 > .p2_blue_present{
+     background: url("../img/p2_blue_present.png") no-repeat center center;
+     width: 4.8125rem;
+     height: 7.8125rem;
+     position: fixed;
+     left: 17.875rem;
+     bottom: 2.625rem;
+     animation: pbp 1.2s linear;
+ }
+@keyframes pbp {
+    0%{
+        opacity: 0;
+        bottom: 37.6875rem;
+        left: 17.5rem;
+    }
+    95%{
+        opacity: 1;
+        bottom: 2.625rem;
+        left: 17.5rem;
+    }
+    96%{
+        bottom: 2.875rem;
+        left: 17.5625rem;
+    }
+    97%{bottom: 2.625rem;left: 17.625rem;}
+    98%{bottom: 2.875rem;left: 17.6875rem;}
+    100%{bottom: 2.625rem;left: 17.875rem}
+}
+
+
+
+#page2 > .p2_pink_present{
+    background: url("../img/p2_pink_present.png") no-repeat center center;
+    width: 5.4375rem;
+    height: 9.1875rem;
+    position: fixed;
+    left: 24.8125rem;
+    bottom: 2.6875rem;
+}
+
+#page2 > .p2_yellow_present{
+    background: url("../img/p2_yellow_present.png") no-repeat center center;
+    width: 6.4375rem;
+    height: 13.0625rem;
+    position: fixed;
+    left: 29.375rem;
+    bottom: 2.5rem;
+    animation: pyp 1.2s linear;
+}
+@keyframes pyp {
+    0%{
+        opacity: 0;
+        transform: rotate(15deg);
+        bottom: 37.6875rem;
+    }
+    99%{
+        opacity: 1;
+        transform: rotate(15deg);
+        bottom: 2.5rem;
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+
+#page2 > .p2_black_present{
+    background: url("../img/p2_black_present.png") no-repeat center center;
+    width: 7.9375rem;
+    height: 8.1875rem;
+    position: fixed;
+    right: 16rem;
+    bottom: 2.875rem;
+    animation: pbps 1.2s linear;
+}
+@keyframes pbps {
+    0%{
+        opacity: 0;
+        bottom: 37.6875rem;
+        transform: rotate(180deg);
+    }
+    100%{
+        opacity: 1;
+        bottom: 2.875rem;
+        transform: rotate(0deg);
+    }
+}
+
+#page2 > .p2_left_bird{
+    background: url("../img/p2_left_bird.png") no-repeat center center;
+    width: 14.75rem;
+    height: 21.25rem;
+    position: fixed;
+    right: 0.5625rem;
+    bottom: 2.9375rem;
+    display: none;
+}
+
+#page2> .p2_left_bird_appear{
+    display: block;
+    animation: plba 1s linear;
+}
+@keyframes plba {
+    0%{
+        right: -14.75rem;
+        bottom: 2.9375rem;
+    }
+    25%{
+        right: -11.0625rem;
+        bottom: 1.6875rem;
+    }
+    50%{
+        right: -7.375rem;
+        bottom: 2.9375rem;;
+    }
+    75%{
+        right: -3.6875rem;
+        bottom: 1.6875rem;
+    }
+    100%{
+        right: 0.5625rem;
+        bottom: 2.9375rem;
+    }
+}
+
+
+
+#page2 > .p2_happy_birthday{
+    background: url("../img/p2_happybirthday.png") no-repeat center center;
+    width: 54.875rem;
+    height: 18.625rem;
+    position: fixed;
+    right: 3.4375rem;
+    top: 3.3125rem;
+}
+
+#page2 > .p2_sheng{
+    background: url("../img/p2_sheng.png") no-repeat center center;
+    width: 5.125rem;
+    height: 6.3125rem;
+    position: fixed;
+    left: 18.625rem;
+    top: 22.4375rem;
+}
+
+#page2 > .p2_ri{
+    background: url("../img/p2_ri.png") no-repeat center center;
+    width: 5.125rem;
+    height: 6.3125rem;
+    position: fixed;
+    left: 24.9375rem;
+    top: 22.4375rem;
+}
+
+#page2 > .p2_kuai{
+     background: url("../img/p2_kuai.png") no-repeat center center;
+     width: 5.125rem;
+     height: 6.3125rem;
+     position: fixed;
+     left: 31.125rem;
+     top: 22.4375rem;
+ }
+
+#page2 > .p2_le{
+    background: url("../img/p2_le.png") no-repeat center center;
+    width: 5.125rem;
+    height: 6.3125rem;
+    position: fixed;
+    left: 37.5rem;
+    top: 22.4375rem;
+}
+
+#page2 > .p2_back{
+    position: fixed;
+    top: 30.3125rem;
+}
+
+#page2 > .p2_back ul{
+    list-style: none;
+}
+
+#page2 > .p2_back ul li{
+    font-size: 52px;
+    font-family: "Kristen ITC";
+}

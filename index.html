@@ -1,11 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hello github</title>
+    <meta charset="UTF-8">
+    <title>魏瑾婷生日快乐</title>
+    <link href="css/greetingcard.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bind.new.animation.js"></script>
+    <script src="js/typewriter.js"></script>
 </head>
 <body>
-  <h1>hello github111</h1>
+    <!--第一张页面开始-->
+    <div id="page1" class="page">
+
+        <!--头部水印开始-->
+        <div class="top_watermark" ></div>
+        <!--头部水印结束-->
+
+        <!--底部水印开始-->
+        <div class="bottom_watermark"></div>
+        <!--底部水印结束-->
+
+        <!--左边头部彩带开始-->
+        <div class="left_coloured"></div>
+        <!--左边头部彩带结束-->
+
+        <!--右边头部彩带开始-->
+        <div class="right_coloured"></div>
+        <!--右边头部彩带开始-->
+
+        <!--右边气球开始-->
+        <div id="right_balloon" class="right_balloon right_balloon_appear"></div>
+        <!--右边气球结束-->
+
+        <!--左边气球开始-->
+        <div id="left_balloon" class="left_balloon left_balloon_appear"></div>
+        <!--左边气球结束-->
+
+        <!--头部彩花开始-->
+        <div id="top_ayaka" class="top_ayaka top_ayaka_appear"></div>
+        <!--底部彩花结束-->
+
+        <!--底部彩花开始-->
+        <div id="bottom_ayaka" class="bottom_ayaka top_ayaka_appear"></div>
+        <!--底部彩花结束-->
+
+        <!--底部气球开始-->
+        <div id="bottom_balloon"  class="bottom_balloon bottom_balloon_appear" ></div>
+        <!--底部气球结束-->
+
+        <!--happy_birthday开始-->
+        <div id="happy_birthday" class="happy_birthday"></div>
+        <!--happy_birthday结束-->
+
+        <!--蛋糕开始-->
+        <div id="cake" class="cake " ></div>
+        <!--蛋糕结束-->
+
+    </div>
+    <!--第一张页面结束-->
+
+    <!--第二张页面开始-->
+    <div id="page2" class="page">
+        <!--背景横线开始-->
+        <div class="p2_bg_line"></div>
+        <!--背景横线结束-->
+
+        <!--底部蓝底开始-->
+        <div class="p2_bottom_blue"></div>
+        <!--底部蓝底结束-->
+
+        <!--右边小鸟开始-->
+        <div id="p2_right_bird" class="p2_right_bird"></div>
+        <!--右边小鸟结束-->
+
+        <!--蓝色礼物开始-->
+        <div class="p2_blue_present" ></div>
+        <!--蓝色礼物结束-->
+
+        <!--粉色礼物开始-->
+        <div class="p2_pink_present p2_present"></div>
+        <!--粉色礼物结束-->
+
+        <!--黄色礼物开始-->
+        <div class="p2_yellow_present "></div>
+        <!--黄色礼物结束-->
+
+        <!--黑色礼物开始-->
+        <div id="p2_black_present" class="p2_black_present "></div>
+        <!--黑色礼物结束-->
+
+        <!--左边小鸟开始-->
+        <div id="p2_left_bird" class="p2_left_bird"></div>
+        <!--左边小鸟结束-->
+
+        <!--happy birthday开始-->
+        <div class="p2_happy_birthday"></div>
+        <!--happy birthday结束-->
+
+        <!--生日快乐开始-->
+        <div class="p2_sheng"></div>
+        <div class="p2_ri"></div>
+        <div class="p2_kuai"></div>
+        <div class="p2_le"></div>
+        <!--生日快乐结束-->
+
+        <!--回顾去年开始-->
+        <div class="p2_back">
+            <ul>
+                <li id="font1" style="margin: 0 3rem;text-indent: 7rem;text-align: justify;">我谨代表党和人民热烈祝贺小魏同学生日快乐，愿你今后的日子前程似锦心想事成。</li>
+                <!-- <li id="font1" style="margin-left: 9.375rem">我谨代表党和人民热烈祝贺小魏老师生日快乐，愿你今后的日子前程似锦心想事成。</li> -->
+                <li id="font2" style="margin-left: 9.375rem;opacity: 0;"></li>
+                <li id="font3" style="margin-left: 9.375rem;opacity: 0;"></li>
+                <li id="font4" style="margin-left: 9.375rem;opacity: 0;"></li>
+            </ul>
+        </div>
+        <!--回顾去年结束-->
+
+
+    </div>
+    <!--第二张页面结束-->
+
+<script>
+    console.log(innerWidth,innerHeight);
+    //page1页面的特效
+    Actions.bindNewAnimation('top_ayaka', 'top_ayaka_appear', 'bottom_ayaka_keep');
+    Actions.bindNewAnimation('bottom_ayaka', 'top_ayaka_appear', 'bottom_ayaka_keep');
+    Actions.bindNewAnimation('right_balloon', 'right_balloon_appear', 'right_balloon_keep');
+    Actions.bindNewAnimation('left_balloon', 'left_balloon_appear', 'left_balloon_keep');
+    Actions.bindNewAnimation('bottom_balloon', 'bottom_balloon_appear', 'bottom_balloon_keep');
+    Actions.bindDifferent('bottom_balloon', 'happy_birthday', 'happy_birthday_appear');
+    Actions.bindDifferent('happy_birthday', 'cake', 'cake_appear');
+
+    //page2页面的特效
+    Actions.bindDifferent('p2_black_present', 'p2_left_bird', 'p2_left_bird_appear');
+    Actions.bindDifferent('p2_black_present', 'p2_right_bird', 'p2_right_bird_appear');
+    var param = TypeWriter.bind_note(['font1', 'font2', 'font3', 'font4']);
+    TypeWriter.start(param, 500);
+</script>
 </body>
 </html>
